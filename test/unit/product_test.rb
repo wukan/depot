@@ -15,7 +15,7 @@ class ProductTest < ActiveSupport::TestCase
   test "product price must be positive" do
     product = Product.new(
       :title  => "My Book Title",
-      :description => "yyy",
+      :description => "description muse be larger than 10 chars",
       :image_url => "zzz.jpg",
       )
     product.price = -1
@@ -34,7 +34,7 @@ class ProductTest < ActiveSupport::TestCase
   
   def new_product(image_url)
     Product.new(:title => "My Book Title",
-                :description => "yyy",
+                :description => "description muse be larger than 10 chars",
                 :price => 1,
                 :image_url => image_url)
   end
