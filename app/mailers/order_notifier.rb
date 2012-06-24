@@ -1,5 +1,5 @@
 class OrderNotifier < ActionMailer::Base
-  default from: "Kan Wu buaacsewk@gmail.com"
+  default from: "buaacsewk@gmail.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -20,6 +20,6 @@ class OrderNotifier < ActionMailer::Base
   def shipped(order)
     @order = order
 
-    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
+    mail to: order.email, subject: 'Pragmatic Store Order Shipped'
   end
 end
